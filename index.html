@@ -1,0 +1,425 @@
+<!DOCTYPE html><html lang="en"><head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hail Chang — Presentation Script</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&amp;display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16243D;
+    --ink-soft:#3A4A66;
+    --brass:#E2A12C;
+    --brass-deep:#C2811A;
+    --teal:#2E7D6B;
+    --plum:#7C3F58;
+    --cream:#FAF4E8;
+    --paper:#FFFDF8;
+    --line:#E7DDC8;
+    --font-display:"Bricolage Grotesque", system-ui, sans-serif;
+    --font-body:"DM Sans", system-ui, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0; background:var(--cream); color:var(--ink); font-family:var(--font-body);}
+  .wrap{ max-width:820px; margin:0 auto; padding:64px 56px 96px; }
+
+  /* header */
+  .doc-head{ border-bottom:3px solid var(--ink); padding-bottom:28px; margin-bottom:40px; }
+  .doc-eyebrow{
+    display:inline-flex; align-items:center; gap:12px; font-weight:700; letter-spacing:.16em;
+    text-transform:uppercase; font-size:13px; color:var(--brass-deep);
+  }
+  .doc-eyebrow::before{ content:""; width:30px; height:3px; border-radius:3px; background:var(--brass); }
+  h1{ font-family:var(--font-display); font-weight:800; font-size:46px; line-height:1.05; letter-spacing:-.02em; margin:16px 0 10px; }
+  .doc-sub{ font-size:18px; color:var(--ink-soft); line-height:1.5; margin:0; max-width:620px; }
+
+  .tips{
+    background:var(--paper); border:1px solid var(--line); border-left:6px solid var(--brass);
+    border-radius:14px; padding:20px 24px; margin:0 0 44px;
+  }
+  .tips h3{ margin:0 0 10px; font-size:15px; font-weight:800; letter-spacing:.04em; text-transform:uppercase; color:var(--brass-deep); }
+  .tips ul{ margin:0; padding-left:20px; }
+  .tips li{ font-size:16px; line-height:1.55; color:var(--ink-soft); margin-bottom:6px; }
+  .tips li:last-child{ margin-bottom:0; }
+  .tips b{ color:var(--ink); }
+
+  /* slide block */
+  .slide{ margin-bottom:34px; padding-bottom:32px; border-bottom:1.5px solid var(--line); }
+  .slide:last-child{ border-bottom:none; }
+  .slide-head{ display:flex; align-items:baseline; gap:16px; margin-bottom:14px; }
+  .slide-num{
+    flex:none; font-family:var(--font-display); font-weight:800; font-size:16px; color:#fff;
+    background:var(--ink); border-radius:9px; padding:5px 11px; line-height:1.1;
+  }
+  .slide.sec .slide-num{ background:var(--brass-deep); }
+  .slide-title{ font-family:var(--font-display); font-weight:700; font-size:24px; line-height:1.15; letter-spacing:-.01em; color:var(--ink); }
+  .slide-kind{ font-size:13px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--teal); margin-top:3px; }
+  .slide.sec .slide-kind{ color:var(--brass-deep); }
+
+  .say{ font-size:var(--say-size,18.5px); line-height:var(--say-lh,1.62); color:var(--ink); margin:0; }
+  body.hide-cues .cue{ display:none; }
+  body.stage-dark{ background:#0d1626; color:var(--cream); }
+  html.stage-dark{ background:#0d1626; }
+  body.stage-dark .slide-title, body.stage-dark .say{ color:var(--cream); }
+  body.stage-dark .say em{ color:rgba(250,244,232,.72); }
+  body.stage-dark .doc-head{ border-bottom-color:rgba(250,244,232,.35); }
+  body.stage-dark h1{ color:var(--cream); }
+  body.stage-dark .doc-sub{ color:rgba(250,244,232,.72); }
+  body.stage-dark .slide{ border-bottom-color:rgba(250,244,232,.14); }
+  body.stage-dark .tips{ background:rgba(250,244,232,.05); border-color:rgba(250,244,232,.16); }
+  body.stage-dark .tips li{ color:rgba(250,244,232,.78); }
+  body.stage-dark .tips b{ color:var(--cream); }
+  body.stage-dark .slide.sec .slide-num{ background:var(--brass); color:var(--ink); }
+  body.stage-dark .slide:not(.sec) .slide-num{ background:rgba(250,244,232,.16); }
+  .say p{ margin:0 0 14px; }
+  .say p:last-child{ margin-bottom:0; }
+  .say em{ color:var(--ink-soft); font-style:italic; }
+  .cue{
+    display:inline-block; font-size:13px; font-weight:700; color:var(--plum);
+    background:rgba(124,63,88,.09); border-radius:6px; padding:2px 9px; margin-bottom:10px;
+    letter-spacing:.02em;
+  }
+
+  @media print{
+    html,body{ background:#fff; }
+    .wrap{ padding:0 8px; max-width:none; }
+    .slide{ break-inside:avoid; }
+    .tips{ break-inside:avoid; }
+  }
+</style>
+</head>
+<body style="">
+<div class="wrap">
+
+  <header class="doc-head">
+    <span class="doc-eyebrow">Speaking Script · Read from this while you present</span>
+    <h1>My Capstone Project — what to say</h1>
+    <p class="doc-sub">A slide-by-slide script in my own words. I don't have to say every word exactly — these are here so I always know what comes next and never get stuck.</p>
+  </header>
+
+  <div class="tips">
+    <h3>Before I start</h3>
+    <ul>
+      <li><b>Slow down.</b> Take a breath between slides — it always feels faster to the audience than it does to me.</li>
+      <li><b>Look up.</b> Glance at the script, then look at the class while I talk.</li>
+      <li><b>It's my story.</b> If I forget a line, I just keep going in my own words — I know this better than anyone.</li>
+    </ul>
+  </div>
+
+  <!-- 1 -->
+  <section class="slide">
+    <div class="slide-head"><span class="slide-num">01</span><div><div class="slide-title">My Capstone Project</div><div class="slide-kind">Title</div></div></div>
+    <div class="say">
+      <p>Hey everyone, my names Hail Chang, and this is my Grade 10 Capstone Project.</p>
+      <p>In this project I'm going to walk you through where I've been, what I've discovered about myself, and the kind of person I'm hoping to become. So — let's get into it.</p>
+    </div>
+  </section>
+
+  <!-- 2 -->
+  <section class="slide">
+    <div class="slide-head"><span class="slide-num">02</span><div><div class="slide-title">Today's Roadmap</div><div class="slide-kind">Agenda</div></div></div>
+    <div class="say">
+      <p>So this is the roadmap i'll be going through. First I'll talk about my Blueprint journey — the assessments I took and what they showed me. Then my long-term career goal and how I plan to get there.</p>
+      <p>After that I'll cover my life outside of work, my inquiry project on jazz musician Charlie Parker, and finally how school has prepared me for the future.</p>
+    </div>
+  </section>
+
+  <!-- 3 -->
+  <section class="slide sec">
+    <div class="slide-head"><span class="slide-num">03</span><div><div class="slide-title">Section One — My Blueprint Journey</div><div class="slide-kind">Section divider</div></div></div>
+    <div class="say">
+      <p class="cue">Short pause — this is just the section title.</p>
+      <p>First up: My Blueprint journey. This is where I took a bunch of assessments, and they pointed me toward careers and schools I'd never really thought about before.</p>
+    </div>
+  </section>
+
+  <!-- 4 -->
+  <section class="slide">
+    <div class="slide-head"><span class="slide-num">04</span><div><div class="slide-title">What myBlueprint Did For Me</div><div class="slide-kind">myBlueprint</div></div></div>
+    <div class="say">
+      <p>So, myBlueprint helped me explore alot of options. Instead of just guessing about my future, it gave me real ways to actually explore who I am and what's out there.</p>
+      <p>It helped me find my interests, showed me careers I could picture myself in, and even suggested schools and programs. Which was really great because it gave me clearer goals for the future.</p>
+    </div>
+  </section>
+
+  <!-- 4b -->
+  <section class="slide">
+    <div class="slide-head"><span class="slide-num">05</span><div><div class="slide-title">The Surveys I Completed</div><div class="slide-kind">Who am I?</div></div></div>
+    <div class="say">
+      <p>Before myBlueprint could match me with any careers, it had me complete five quick surveys to figure out who I actually am.</p>
+      <p>The first was Learning Styles — turns out I'm an auditory-kinesthetic learner, so I pick things up best by listening and actually doing them. Then personality came back as ESFJ, "the Provider" — basically outgoing and people-focused. My interests came out as "The Maker," a mix of realistic and artistic. My strongest subject area was Business, then math and language arts. And my top motivation was Achievement — I want to do work that feels important and actually lasts.</p>
+      <p>When I look at all five together they honestly line up really well — and these are exactly what myBlueprint used to come up with my top career matches, which I'll show you next.</p>
+    </div>
+  </section>
+
+  <!-- 5 -->
+  <section class="slide">
+    <div class="slide-head"><span class="slide-num">06</span><div><div class="slide-title">My Top 3 Career Matches</div><div class="slide-kind">My results</div></div></div>
+    <div class="say">
+      <p>After my assessments, these were my top three matches. Number one was entrepreneurship — basically starting and running my own business: spotting opportunities, taking ALOT of financial risk, and turning an idea into something real that people actually want or need</p>
+      <p>Number two was producer. A producer is the person who manages and coordinates the making of a film, a show, or an event — they hire the team, help guide the creative decisions, and keep the budget and resources organized so the whole thing actually gets made. So it's a leadership and organizing role more than anything.</p>
+      <p>And number three was director. The director is the one leading the actors and the crew — taking a script and turning it into the finished product, and making sure every single part fits together so it actually connects with the audience.</p>
+      <p>What stood out to me is that all three are really about the same thing: building something from scratch and leading a team to pull it off. Id say that fits me pretty well, because ive always wanted to run my own things. And it's a big reason why i know entrepreneurship is the right path for me</p>
+    </div>
+  </section>
+
+  <!-- 6 -->
+  <section class="slide">
+    <div class="slide-head"><span class="slide-num">07</span><div><div class="slide-title">Post-Secondary Schools I'm Interested In</div><div class="slide-kind">Discoveries</div></div></div>
+    <div class="say">
+      <p>These are a few post-secondary schools i'd really want to go to. The three I keep coming back to are the University of Toronto, New York University, and Complutense University of Madrid.</p>
+      <p>The cool thing is all three are strong for business, which is what I'd want to study — UofT has Rotman, NYU has Stern, and Madrid has a solid business school too. But they each offer a totally different experience. UofT keeps me in Canada but in a brand-new city. NYU drops me right into New York. And Madrid puts me in the middle of Europe.</p>
+      <p>That mix is kind of the point — same goal, three completely different paths to get there. I'll break down exactly why each one caught my eye on the next slide</p>
+    </div>
+  </section>
+
+  <!-- 7 -->
+  <section class="slide">
+    <div class="slide-head"><span class="slide-num">08</span><div><div class="slide-title">Why I Chose These Schools</div><div class="slide-kind">My reasons</div></div></div>
+    <div class="say">
+      <p>For UFT — it's still in Canada, but the reason i choose UFT over UBC is because i've lived in Vancouver my whole life. Its always been "Lets go to vancouver", or "hey wanna go dowtown?" or "Hey wanna go to metro?" And its always the same repeating. Over, and Over, and Over again. Thats why toronto is one of my options, to explore a whole new city, while still being in canada but with a complete differnt feeling. Another reason i choose toronto is because it has a great business school. Buisness school of Rotman.</p>
+      <p style="">&nbsp;NYU is more like a "Dream School" since its really hard to get into.. Living in New York City, has always been a big dream of mine. Ive always loved city life, expecially New York City because of its unique city traffic and its diversity. Something about Newyork just draws me in. Maybe its becuase of all the unique things. New York would also give me alot more oppertunities then most places and I would NEVER EVER get bored. I mean New York CIty is around 7 times Bigger Then Vacouver city and New York citys population has around 8 million more then Vancouver. Everyday, would be a new destination — plus, New York has Stern one of the top buisness schools in the world&nbsp;&nbsp;<div><br></div><div style="">Finnaly, Spain Madrid. I choose Madrid because I always wanted to live in Europe. Traveling around Europe has always been a dream of mine and since alot of the countires i want to visit are close to madrid, It makes it alot easier to travel while still being in school. I also choose this school becuase (UCM) is also one of the oldest universties in the world&nbsp; established in 1293. I feel like going to this school makes it alot more speical. Id say going to univeristy in europe would be an Life Changing Experience. I mean its Europe, It has a complete different atmostphere different language and a complete different feeling.</div></p>
+    </div>
+  </section>
+
+  <!-- 8 -->
+  <section class="slide sec">
+    <div class="slide-head"><span class="slide-num">09</span><div><div class="slide-title">Section Two — My Long-Term Career Goal</div><div class="slide-kind">Section divider</div></div></div>
+    <div class="say">
+      <p class="cue">Short pause.</p>
+      <p>now ill be talking about my actual long-term goal, the road I'd take to get there, and how I'd make it work money-wise.</p>
+    </div>
+  </section>
+
+  <!-- 9 -->
+  <section class="slide">
+    <div class="slide-head"><span class="slide-num">10</span><div><div class="slide-title">Where I Want To Be</div><div class="slide-kind">The goal</div></div></div>
+    <div class="say">
+      <p>My dream is to be an entrepreneur and a social media influencer. There's just something special to me about making income from something you built yourself — it feels way more fulfilling, and it gives me freedom.</p>
+      <p>I'd also love to be known online for inspiring teens who are just like me. And if it doesn't fully work out, my backup is taking over my dad's taekwondo company while still running my own e-com business . i wouldnt ever give up. </p>
+    </div>
+  </section>
+
+  <!-- 10 -->
+  <section class="slide">
+    <div class="slide-head"><span class="slide-num">11</span><div><div class="slide-title">My Road From Here</div><div class="slide-kind">The journey</div></div></div>
+    <div class="say">
+      <p>My goal is to become the CEO of a successful e-commerce business — and here's the road I'd take to get there.</p>
+      <p>At age 16, I'd focus on learning important business skills like marketing, sales, and website design, and I'd start my own online business to get real-world experience. I'd also have a side gig to save money for the future, and I'd watch online courses and master how to use AI to my advantage.</p>
+      <p>Before graduating high school in 2028, I'd keep building that online business. That would teach me how to attract customers, manage finances, and solve real business problems. By experimenting with different ideas and learning from my mistakes, I'd build the skills to run something bigger down the line. I'd also aim to get into a good university and major in business, so I can make strong connections with professors and other students and ask them for tips and ideas when I need them.</p>
+      <p>After graduating, I'd focus on growing the business — improving my products, my marketing, and the customer experience. As the company expands, I'd hire employees to help with daily operations, and would go to university to make good connections with people who are just like me and connections with buisness professors.</p>
+      <p>Over time, I'd scale the business by reaching more customers and building a strong brand. As CEO, I'd be responsible for the major decisions, setting goals, and leading the company toward long-term success. By working hard, staying curious, and adapting to changes in the market, my aim is to build a successful and profitable e-commerce business.</p>
+    </div>
+  </section>
+
+  <!-- 11 -->
+  <section class="slide">
+    <div class="slide-head"><span class="slide-num">12</span><div><div class="slide-title">What It Costs To Live There</div><div class="slide-kind">Cost of living</div></div></div>
+    <div class="say">
+      <p>I also looked at what it'd cost to actually live in each city as a student. Toronto comes out around $2,200 a month, New York is the priciest at about $3,100, and Madrid is the cheapest at around $1,650.</p>
+      <p>My parents are willing to cover about half wherever I go, so I'd pick up a part-time job or side gig to handle the rest. These are rough estimates, just to compare the three.</p>
+    </div>
+  </section>
+
+  <!-- 12 -->
+  <section class="slide">
+    <div class="slide-head"><span class="slide-num">13</span><div><div class="slide-title">What I Could Earn</div><div class="slide-kind">The payoff</div></div></div>
+    <div class="say">
+      <p>So what's the payoff? It really depends on how the business does, but on average a CEO or entrepreneur in Canada earns somewhere between $80,000 and $200,000 a year. However you could also make around nothing or in rare cases tens of millions of dollars.</p>
+      <p>That's a wide range, and that's honestly the nature of running your own thing — but the upside is part of what excites me.</p>
+    </div>
+  </section>
+
+  <!-- 14 -->
+  <section class="slide sec">
+    <div class="slide-head"><span class="slide-num">14</span><div><div class="slide-title">Section Three — Life Outside My Career</div><div class="slide-kind">Section divider</div></div></div>
+    <div class="say">
+      <p class="cue">Short pause.</p>
+      <p>A career is only part of the picture though. So section three is about the rest of the life I actually want to build.</p>
+    </div>
+  </section>
+
+  <!-- 15 -->
+  <section class="slide">
+    <div class="slide-head"><span class="slide-num">15</span><div><div class="slide-title">My Goals Beyond Work</div><div class="slide-kind">The whole picture</div></div></div>
+    <div class="say">
+      <p>The main goals for me outside of work are having alot of spare time. So i can do many things like spending time with my future family, side quests with  friends, getting into photography,  traveling ALOT , going to the gym. Two more that are right at the top of my list: is sky diving, and getting a  Kawasaki ZX-6R  my dream bike. I would also want 2 or more dogs.</p>
+      <p>And here's the thing: running my own online business is exactly what makes that life possible. I could be at the other side of the world, I would just need a phone and laptop to work. The flexible time also means I can actually travel, pick up my camera, play sports, and be there for the people I care about.</p>
+    </div>
+  </section>
+
+  <!-- 16 -->
+  <section class="slide">
+    <div class="slide-head"><span class="slide-num">16</span><div><div class="slide-title">Backpacking Through Europe</div><div class="slide-kind">My dream trip</div></div></div>
+    <div class="say">
+      <p>One day I really want to backpack across Europe — with my friends, or my future wife.  This map shows the kind of route I'd take.</p>
+      <p>It's 21 stops across 14 countries — London, Paris, Rome, the Swiss Alps, Greece, all of it. And honestly this isn't even everything; there's a ton more I'd add along the way.</p>
+    </div>
+  </section>
+
+  <!-- 17 -->
+  <section class="slide">
+    <div class="slide-head"><span class="slide-num">17</span><div><div class="slide-title">My Dream Houses &amp; Where I Want To Live</div><div class="slide-kind">Looking ahead</div></div></div>
+    <div class="say">
+      <p>These are the dream houses i Want and where i want to live in the future — somewhere in Europe like Spain, Switzerland or London; somewhere in the US like California or New York; or back in Canada, probably Toronto.
+
+
+For Spain, Switzerland, or California, I would really want to live in a modern but european looking house. A cool modern house with a GIGANTIC POOL. 
+
+For London, New York, and Toronto, my dream palce to live would be to live in a Penthouse stairing down at the city view. And i would want to live close to the Traffic. The reason is because i actually sleep better that way. I find it real calming.</p>
+      <p>And just so we're clear, houses like these cost millions. This isn't the house I'm <em>planning</em> to get. It's just the dream house.</p>
+    </div>
+  </section>
+
+  <!-- 18 -->
+  <section class="slide sec">
+    <div class="slide-head"><span class="slide-num">18</span><div><div class="slide-title">Section Four — Charlie Parker (Inquiry Project)</div><div class="slide-kind">Section divider</div></div></div>
+    <div class="say">
+      <p class="cue">Short pause.</p>
+      <p>For my inquiry project, I looked into the life of a working musician through one of the greatest of all time — Charlie "Bird" Parker, the founder of bebop jazz.</p>
+    </div>
+  </section>
+
+  <!-- 19 -->
+  <section class="slide">
+    <div class="slide-head"><span class="slide-num">19</span><div><div class="slide-title">Early Life &amp; Influences</div><div class="slide-kind">Part 1 · The beginning</div></div></div>
+    <div class="say">
+      <p>Parker was born in 1920 in Kansas City and picked up the saxophone around age 11. He had almost no formal training — he learned by listening to professionals and just practicing constantly.</p>
+      <p>His childhood was tough; his dad left and his mom worked long hours. But Kansas City had this rich jazz and blues scene, and that's what shaped his fast, emotional style.</p>
+    </div>
+  </section>
+
+  <!-- 20 -->
+  <section class="slide">
+    <div class="slide-head"><span class="slide-num">20</span><div><div class="slide-title">Breakthrough &amp; Struggle</div><div class="slide-kind">Part 2 · The career</div></div></div>
+    <div class="say">
+      <p>His career took off in jazz clubs, and in the 1940s he became one of the founders of bebop — faster and more complex than the jazz before it.</p>
+      <p>But his life was unstable — constant travel, and serious struggles with addiction that hurt his health. What gets me is this: early on, he was actually laughed off the stage. So he went and practiced so hard that he came back as one of the best saxophonists anyone had ever heard.</p>
+    </div>
+  </section>
+
+  <!-- 22 -->
+  <section class="slide">
+    <div class="slide-head"><span class="slide-num">21</span><div><div class="slide-title">What Parker Taught Me</div><div class="slide-kind">Part 4 · What I learned</div></div></div>
+    <div class="say">
+      <p>Researching him taught me a few things. Talent alone isn't enough — you need balance, support, and healthy habits. Discipline really does pay off. And his story is both inspiring and a bit of a warning.</p>
+      <p>Basically, whatever path I choose, I'll need consistency, people who support me, never giving up, and to actually believe in myself — because that's the difference between a career that lasts and one that doesn't.</p>
+    </div>
+  </section>
+
+  <!-- 23 -->
+  <section class="slide sec">
+    <div class="slide-head"><span class="slide-num">22</span><div><div class="slide-title">Section Five — How School Prepared Me</div><div class="slide-kind">Section divider</div></div></div>
+    <div class="say">
+      <p class="cue">Short pause.</p>
+      <p>This is the Last section. This one's about how school shaped me and my opinions of secondary.</p>
+    </div>
+  </section>
+
+  <!-- 24 -->
+  <section class="slide">
+    <div class="slide-head"><span class="slide-num">23</span><div><div class="slide-title">How High School Set Me Up</div><div class="slide-kind">Looking back</div></div></div>
+    <div class="say">
+      <p>Grade school honestly set me up more than I realized. It taught me to manage my time, work with all kinds of people, think critically, and communicate clearly.</p>
+      <p>It also taught me to own my own learning, and I met so many people who shaped who I am.  However... Id say almost everything we learn from school is going to be pointless. Like math.. or Socials I mean with technology and everything, id say thiers no actuall point except for making your brain work. In my perspective, All highschools ever say is (what job do you want) or (Where do you want to work in the future). The whole school system is based off of getting the perfect job. And im not saying thats wrong. But what if the school system also creates something so the kids who strive to become CEO's can be prepared and have some knowledge to start their own buisness one day.  Some people might also be thinking. Theirs buisness class for a reason. Well buisness does teach you about starting your own a buisness. I mean yea you get tips and tricks on how to make ads and more but you never get a guide on how to start and become succesful. You get no actuall knowledge that helps you start your own buisness.  Thats why i want to also become an Soical Media influencer, So i can help teens who were just like me, make thier dreams come true.</p>
+    </div>
+  </section>
+
+  <!-- 26 -->
+  <section class="slide sec">
+    <div class="slide-head"><span class="slide-num">24</span><div><div class="slide-title">Thanks For Listening</div><div class="slide-kind">Closing</div></div></div>
+    <div class="say">
+      <p>And that's my Capstone Project — where I've been, what I've figured out, and where I'm hoping to go.</p>
+      <p>Thanks so much for listening. I'm happy to answer any questions.</p>
+    </div>
+  </section>
+
+</div>
+
+<!-- ===================== TWEAKS PANEL ===================== -->
+<style>
+  #tweaks{ position:fixed; right:20px; bottom:20px; z-index:9999; width:266px;
+    font-family:var(--font-body); background:var(--paper); color:var(--ink);
+    border:1px solid var(--line); border-radius:16px; box-shadow:0 18px 44px -16px rgba(22,36,61,.5);
+    padding:16px 18px 18px; display:none; }
+  #tweaks.on{ display:block; }
+  #tweaks .tw-head{ display:flex; align-items:center; justify-content:space-between; margin-bottom:14px; }
+  #tweaks .tw-title{ font-family:var(--font-display); font-weight:800; font-size:16px; letter-spacing:.02em; }
+  #tweaks .tw-x{ border:none; background:none; cursor:pointer; font-size:18px; line-height:1; color:var(--ink-soft); padding:4px; border-radius:6px; }
+  #tweaks .tw-x:hover{ background:rgba(22,36,61,.08); }
+  #tweaks .tw-row{ margin-bottom:14px; }
+  #tweaks .tw-row:last-child{ margin-bottom:0; }
+  #tweaks label{ display:flex; justify-content:space-between; align-items:baseline; font-size:13px; font-weight:700; letter-spacing:.03em; text-transform:uppercase; color:var(--brass-deep); margin-bottom:7px; }
+  #tweaks label .val{ font-weight:600; color:var(--ink-soft); text-transform:none; letter-spacing:0; font-variant-numeric:tabular-nums; }
+  #tweaks input[type=range]{ width:100%; accent-color:var(--brass-deep); margin:0; }
+  #tweaks .seg{ display:flex; gap:6px; }
+  #tweaks .seg button{ flex:1; cursor:pointer; font-family:var(--font-body); font-weight:700; font-size:13px;
+    border:1.5px solid var(--line); background:var(--cream); color:var(--ink-soft); border-radius:9px; padding:8px 6px; }
+  #tweaks .seg button.sel{ background:var(--ink); color:var(--cream); border-color:var(--ink); }
+  @media print{ #tweaks{ display:none !important; } }
+</style>
+<div id="tweaks" aria-label="Tweaks">
+  <div class="tw-head"><span class="tw-title">Tweaks</span><button class="tw-x" id="twClose" aria-label="Close">✕</button></div>
+  <div class="tw-row">
+    <label>Text size <span class="val" id="twSizeVal"></span></label>
+    <input type="range" id="twSize" min="15" max="30" step="0.5">
+  </div>
+  <div class="tw-row">
+    <label>Line spacing <span class="val" id="twLhVal"></span></label>
+    <input type="range" id="twLh" min="1.3" max="2.1" step="0.05">
+  </div>
+  <div class="tw-row">
+    <label>Cue notes</label>
+    <div class="seg" id="twCues"><button data-v="on">Show</button><button data-v="off">Hide</button></div>
+  </div>
+  <div class="tw-row">
+    <label>Reading mode</label>
+    <div class="seg" id="twTheme"><button data-v="light">Paper</button><button data-v="dark">Stage</button></div>
+  </div>
+</div>
+<script>
+(function(){
+  var TWEAKS = /*EDITMODE-BEGIN*/{
+    "saySize": 19.5,
+    "lineHeight": 1.95,
+    "showCues": false,
+    "stageDark": false
+  }/*EDITMODE-END*/;
+
+  function apply(){
+    document.documentElement.style.setProperty('--say-size', TWEAKS.saySize + 'px');
+    document.documentElement.style.setProperty('--say-lh', TWEAKS.lineHeight);
+    document.body.classList.toggle('hide-cues', !TWEAKS.showCues);
+    document.body.classList.toggle('stage-dark', !!TWEAKS.stageDark);
+    document.documentElement.classList.toggle('stage-dark', !!TWEAKS.stageDark);
+    // reflect controls
+    var s=document.getElementById('twSize'); if(s){ s.value=TWEAKS.saySize; document.getElementById('twSizeVal').textContent=TWEAKS.saySize+'px'; }
+    var l=document.getElementById('twLh'); if(l){ l.value=TWEAKS.lineHeight; document.getElementById('twLhVal').textContent=Number(TWEAKS.lineHeight).toFixed(2); }
+    seg('twCues', TWEAKS.showCues ? 'on':'off');
+    seg('twTheme', TWEAKS.stageDark ? 'dark':'light');
+  }
+  function seg(id, v){ var g=document.getElementById(id); if(!g) return; [].forEach.call(g.children, function(b){ b.classList.toggle('sel', b.getAttribute('data-v')===v); }); }
+  function persist(edits){ try{ window.parent.postMessage({type:'__edit_mode_set_keys', edits:edits}, '*'); }catch(e){} }
+
+  // controls
+  document.getElementById('twSize').addEventListener('input', function(e){ TWEAKS.saySize=parseFloat(e.target.value); apply(); persist({saySize:TWEAKS.saySize}); });
+  document.getElementById('twLh').addEventListener('input', function(e){ TWEAKS.lineHeight=parseFloat(e.target.value); apply(); persist({lineHeight:TWEAKS.lineHeight}); });
+  document.getElementById('twCues').addEventListener('click', function(e){ var b=e.target.closest('button'); if(!b) return; TWEAKS.showCues=(b.getAttribute('data-v')==='on'); apply(); persist({showCues:TWEAKS.showCues}); });
+  document.getElementById('twTheme').addEventListener('click', function(e){ var b=e.target.closest('button'); if(!b) return; TWEAKS.stageDark=(b.getAttribute('data-v')==='dark'); apply(); persist({stageDark:TWEAKS.stageDark}); });
+
+  var panel=document.getElementById('tweaks');
+  document.getElementById('twClose').addEventListener('click', function(){ panel.classList.remove('on'); try{ window.parent.postMessage({type:'__edit_mode_dismissed'}, '*'); }catch(e){} });
+
+  // host protocol: register listener BEFORE announcing availability
+  window.addEventListener('message', function(e){
+    var t = e.data && e.data.type;
+    if(t==='__activate_edit_mode'){ panel.classList.add('on'); }
+    else if(t==='__deactivate_edit_mode'){ panel.classList.remove('on'); }
+  });
+  apply();
+  try{ window.parent.postMessage({type:'__edit_mode_available'}, '*'); }catch(e){}
+})();
+</script>
+
+</body></html>
